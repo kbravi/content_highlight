@@ -1,0 +1,38 @@
+.content-highlight{
+  background: yellow;
+  cursor: pointer;
+}
+.content-highlight-lifetime-me{
+  background: #0cf10c;
+}
+.content-highlight-lifetime-others{
+  background: yellow;
+}
+.content-highlight-active{
+  background: #c1c124;
+}
+.content-highlight-poptip{
+  position: absolute;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+  background: #adabab;
+  border: 1px solid #adabab;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  width: 130px;
+}
+.content-highlight-poptip .description{
+  font-size: 100%;
+  line-height: 100%;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content-highlight-poptip .cancel_highlight{
+  font-size: 80%;
+  text-decoration: underline;
+  color: inherit;
+}

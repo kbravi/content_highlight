@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xml:lang="en" lang="en">
+<head>
+  <!-- You can find the latest rangy release at https://github.com/timdown/rangy/releases -->
+  <script type="text/javascript" src="path/to/rangy-core.js"></script>
+  <script type="text/javascript" src="path/to/rangy-classapplier.js"></script>
+  <script type="text/javascript" src="//path/to/content_highlight.js"></script>
+</head>
+<body>
+  <div id="content_container">
+    <!-- content goes here -->
+    <p data-msnode="25311f91">
+      Lorem ipsum tincidunt pharetra massa imperdiet ullamcorper nullam commodo, ut lacinia elementum scelerisque imperdiet augue nunc diam, potenti et id massa orci ligula erat pharetra nulla morbi id habitasse ullamcorper ad magna.<br>
+      Netus libero conubia condimentum eget etiam magna laoreet per, ac lacinia inceptos malesuada pharetra vulputate ac malesuada congue, sollicitudin posuere magna tempor nisi pulvinar etiam orci nullam curae ultricies ullamcorper bibendum venenatis commodo viverra rutrum vulputate aliquet.
+    </p>
+    <p data-msnode="fc86190d">
+      Quisque quis senectus tincidunt elementum nullam viverra,
+      <b data-msnode="d3e32d2">
+        vehicula tortor tempus euismod quisque
+      </b>
+      senectus fringilla, ut faucibus ultrices tempus ultrices aenean id scelerisque odio bibendum tellus litora felis mi nisl ac aliquam auctor sociosqu.
+    </p>
+    <p data-msnode="9a772fd1">
+      Sociosqu inceptos pellentesque amet felis quis dictum pharetra
+      <em data-msnode="daed1212">
+        rutrum cras aliquet ut venenatis nostra rutrum
+      </em>
+      iaculis tristique ultricies amet nullam erat tempus ac dictum, egestas velit rhoncus quisque interdum nullam risus.
+    </p>
+    <p data-msnode="1b7a32b6">
+      Tempor accumsan
+      <a href="https://www.google.com" data-msnode="1edede3">
+        laoreet lacinia est tempus pellentesque,
+      </a>
+      lorem consectetur proin mollis consequat hendrerit purus, porta sed ipsum maecenas neque ipsum quisque magna nec tellus leo volutpat, inceptos cras varius purus neque id justo, maecen
+    </p>
+    <p data-msnode="5bf1b909">
+      Tempor accumsan laoreet lacinia est tempus pellentesque, lorem consectetur proin mollis consequat hendrerit purus, porta sed ipsum maecenas neque ipsum quisque magna nec tellus leo volutpat, inceptos cras varius purus neque id justo, maecen Tempor accumsan laoreet lacinia est tempus pell nTempor accumsan laoreet lacinia est tempus pellentesque, lorem consectetur proin mollis consequat hendrerit purus, porta sed ipsum maecenas neque ipsum quisque magna nec tellus leo volutpat, inceptos cras varius purus neque id justo, maecen
+    </p>
+    <p data-msnode="f5630782">
+      Tempo.Tempor accumsan laoreet lacinia est tempus pellentesque, lorem consectetur proin mollis consequat hendrerit purus, porta sed ipsum maecenas neque ipsum quisque magna nec tellus leo volutpat, inceptos cras varius purus neque id i p
+    </p>
+  </div>
+  <script type="text/javascript">
+    setTimeout(function(){
+      var worker = new contentHighlightWorker(document.getElementById('content_container'), {
+        nodeIdentifierKey: 'msnode',
+        addToServerPath: '/contents/123/add_content_highlights',
+        removeFromServerPath: '/contents/123/remove_content_highlights'
+      });
+      worker.init();
+    }, 10);
+  </script>
+</body>
+</html>
