@@ -11,6 +11,7 @@ var contentHighlightWorker = function(element, options){
     popTipDefaultHead: options.popTipDefaultHead || "Highlight",
     addToServerPath: options.addToServerPath || element.dataset.addhighlightspath,
     removeFromServerPath: options.removeFromServerPath || element.dataset.removehighlightspath,
+    readOnly: options.readOnly || false,
   }
 
   if(!rangy || !rangy.getSelection){
@@ -20,7 +21,9 @@ var contentHighlightWorker = function(element, options){
   this.init = function(){
     rangy.init();
     this.getContentHighlightsFromServer();
-    element.addEventListener('mouseup', this.initializeHighlighter);
+    if (!this.settings.readOnly) {
+      element.addEventListener('mouseup', this.initializeHighlighter);
+    }
   }
 
   this.initializeHighlighter = function(){
