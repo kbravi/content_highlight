@@ -129,7 +129,9 @@ var contentHighlightWorker = function(element, options){
               if(highlightableObject.life_time_class_ends != undefined){
                 self.addLifetimeClassesToElements(elementSet, highlightableObject.life_time_class_ends);
               }
-              self.setEventListenersToHighlights(elementSet);
+              if (!this.settings.readOnly) {
+                self.setEventListenersToHighlights(elementSet);
+              }
               break;
             case "remove":
               var elementSet = element.getElementsByClassName(self.settings.highlightIdentifyClassRoot + highlightableObject.identifier);
