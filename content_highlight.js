@@ -276,13 +276,31 @@ var contentHighlightWorker = function(element, options){
 
   this.ajaxLoader = function(url, params, callbackFunc){
     var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", url, true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.setRequestHeader("Accept", "application/json");    
+    if(document.querySelector('meta[name="csrf-token"]') != null){
+      xmlhttp.setRequestHeader("X-CSRF-Token", document.querySelector('meta[name="csrf-token"]').content);      
+    }
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var data = JSON.parse(this.responseText);
         callbackFunc(data);
       }
     };
-    xmlhttp.open("POST", url, true);
-    xmlhttp.send();
+    xmlhttp.send(self.serializeParams(params));
+  }
+
+  this.serializeParams = function(obj, prefix) {
+    var str = [], p;
+    for(p in obj) {
+      if (obj.hasOwnProperty(p)) {
+        var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
+        str.push((v !== null && typeof v === "object") ?
+          serialize(v, k) :
+          encodeURIComponent(k) + "=" + encodeURIComponent(v));
+      }
+    }
+    return str.join("&");
   }
 }
