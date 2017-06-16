@@ -59,11 +59,11 @@ then
 or, in jquery
 ```
 <script type="text/javascript">
-	$('#content_container').contentHighlighter({
-		nodeIdentifierKey: 'msnode',
+  $('#content_container').contentHighlighter({
+    nodeIdentifierKey: 'msnode',
     addToServerPath: '/contents/123/add_content_highlights',
     removeFromServerPath: '/contents/123/remove_content_highlights'
-	})
+  });
 </script>
 ```
 
