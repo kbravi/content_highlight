@@ -97,7 +97,7 @@ When a text range is selected, the following params are sent to addToServerPath
 After storing this highlight, the server must return *all the highlights* relevant to that content as json
 ```
 [
-	{
+  {
     "identifier": highlight.id,
     "description": "Highlighted by #{highlight.user.full_name}",
     "can_cancel": (highlight.user_id == current_user.id or current_user.is_admin?),
@@ -117,7 +117,7 @@ When a highlight is clicked, a pop tip is shown with a link to remove that highl
 send the highlight's id to removeFromServerPath
 ```
 {
-	content_highlight_id: 123,
+  content_highlight_id: 123,
 }
 ```
 After removing the highlight, the server acknowledges by returning the removed highlight
