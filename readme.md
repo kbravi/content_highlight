@@ -25,22 +25,22 @@ If the html nodes in the content are tagged as below
 
 ```
 <div id="content_container">
-	<p data-msnode="ab14313b">
-		<p data-msnode="fc86190d">
-	    Quisque quis senectus tincidunt elementum nullam viverra,
-	    <b data-msnode="d3e32d2">
-	      vehicula tortor <em data-msnode="ded1312e">tempus euismod</em> quisque
-	    </b>
-	    senectus fringilla, ut faucibus ultrices tempus ultrices aenean id scelerisque odio bibendum tellus litora felis mi nisl ac aliquam auctor sociosqu.
-	  </p>
-	  <p data-msnode="9a772fd1">
-	    Sociosqu inceptos pellentesque amet felis quis dictum pharetra
-	    <em data-msnode="daed1212">
-	      rutrum cras aliquet ut venenatis nostra rutrum
-	    </em>
-	    iaculis tristique ultricies amet nullam erat tempus ac dictum, egestas velit rhoncus quisque interdum nullam risus.
-	  </p>
-	</p>
+  <p data-msnode="ab14313b">
+    <p data-msnode="fc86190d">
+      Quisque quis senectus tincidunt elementum nullam viverra,
+      <b data-msnode="d3e32d2">
+        vehicula tortor <em data-msnode="ded1312e">tempus euismod</em> quisque
+      </b>
+      senectus fringilla, ut faucibus ultrices tempus ultrices aenean id scelerisque odio bibendum tellus litora felis mi nisl ac aliquam auctor sociosqu.
+    </p>
+    <p data-msnode="9a772fd1">
+      Sociosqu inceptos pellentesque amet felis quis dictum pharetra
+      <em data-msnode="daed1212">
+        rutrum cras aliquet ut venenatis nostra rutrum
+      </em>
+      iaculis tristique ultricies amet nullam erat tempus ac dictum, egestas velit rhoncus quisque interdum nullam risus.
+    </p>
+  </p>
 </div>
 ```
 then
