@@ -1,5 +1,6 @@
 ### Content Highlight
 One way to highlight text in html content (inspired by Medium's highlight feature)
+Here is a related ruby gem [acts_as_content_highlightable](https://github.com/kbravi/acts_as_content_highlightable)
 ![How it works](./sample.gif)
 
 ### How it works
